@@ -1,0 +1,34 @@
+
+0B030B07 < symbol table > :
+
+	1	msg2		D	dat	8	sum is =
+	2	num1		D	dat	4	18
+	3	num2		D	dat	4	20
+	4	res		D	bss	4	-
+	5	main		U	txt	-	-
+	6	printf		U	txt	-	-
+
+0D170307 < literal table > :
+
+	1	50		32	reg,img
+	2	10		0A	reg,img
+
+0E016111 < section .data > :
+
+	0E016111 73756D206973203D00-		msg2 db "sum is =",0,10
+	0E01611A 0A           	
+	0E01611B 12000000           		num1 dd 18
+	0E01611F 14000000           		num2 dd 20
+
+0D010143 < section .bss > :
+
+	0D010143 <res 00000004>      		res resd 1
+
+0A070394 < _start > :
+
+	0A070394    B832000000       
+	0A070399    B9A0000000       
+	0A07039E    01C8             
+	0A0703A0    50               
+	0A0703A1    FF35[0E016111]    
+	0A0703A7    E8(00000000)   

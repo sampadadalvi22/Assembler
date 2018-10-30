@@ -1,0 +1,209 @@
+﻿MOV – Instructions
+
+op#01 Mov sym lit32
+op#02 Mov sym lit16
+op#03 Mov sym lit08
+op#04 Mov sym reg32
+op#05 Mov sym reg16
+op#06 Mov sym reg08
+op#07 Mov reg32 lit32
+op#08 Mov reg16 lit16
+op#09 Mov reg08 lit08
+op#10 Mov reg32 reg32
+op#11 Mov reg16 reg16
+op#12 Mov reg08 reg08
+op#13 Mov reg32 sym
+op#14 Mov reg16 sym
+op#15 Mov reg08 sym
+
+
+ADD – Instruction
+
+op#16 Add sym lit32
+op#17 Add sym lit16
+op#18 Add sym lit08
+op#19 Add sym reg32
+op#20 Add sym reg16
+op#21 Add sym reg08
+op#22 Add reg32 lit32
+op#23 Add reg16 lit16
+op#24 Add reg08 lit08
+op#25 Add reg32 reg32
+op#26 Add reg16 reg16
+op#27 Add reg08 reg08
+op#28 Add reg32 sym
+op#29 Add reg16 sym
+op#30 Add reg08 sym
+
+
+SUB – Instruction
+
+op#31 Sub sym lit32
+op#32 Sub sym lit16
+op#33 Sub sym lit08
+op#34 Sub sym reg32
+op#35 Sub sym reg16
+op#36 Sub sym reg08
+op#37 Sub reg32 lit32
+op#38 Sub reg16 lit16
+op#39 Sub reg08 lit08
+op#40 Sub reg32 reg32
+op#41 Sub reg16 reg16
+op#42 Sub reg08 reg08
+op#43 Sub reg32 sym
+op#44 Sub reg16 sym
+op#45 Sub reg08 sym
+
+
+PUSH – Instruction
+
+op#46 Push reg32
+op#47 Push reg16
+op#48 Push reg08
+POP - Instruction
+op#49 Push reg32
+op#50 Push reg16
+op#51 Push reg08
+INC - Instruction
+op#52 Inc reg32
+op#53 Inc reg16
+op#54 Inc reg08
+op#55 Inc mem32/sym
+
+
+DEC – Instruction
+
+op#56 Dec reg32
+op#57 Dec reg16
+op#58 Dec reg08
+op#59 Dec mem32/sym
+
+
+AND – Instruction
+
+op#60 And sym lit32
+op#61 And sym lit16
+op#62 And sym lit08
+op#63 And sym reg32
+op#64 And sym reg16
+op#65 And sym reg08
+op#66 And reg32 lit32
+op#67 And reg16 lit16
+op#68 And reg08 lit08
+op#69 And reg32 reg32
+op#70 And reg16 reg16
+op#71 And reg08 reg08
+op#72 And reg32 sym
+op#73 And reg16 sym
+op#74 And reg08 sym
+NOT – Instruction
+
+op#75 not reg32
+op#76 not reg16
+op#77 not reg08
+op#78 not mem32/sym
+
+OR – Instruction
+
+op#79 or sym lit32
+op#80 or sym lit16
+op#81 or sym lit08
+op#82 or sym reg32
+op#83 or sym reg16
+op#84 or sym reg08
+op#85 or reg32 lit32
+op#86 or reg16 lit16
+op#87 or reg08 lit08
+op#88 or reg32 reg32
+op#89 or reg16 reg16
+op#90 or reg08 reg08
+op#91 or reg32 sym
+op#92 or reg16 sym
+op#93 or reg08 sym
+
+XOR – Instruction
+
+op#94 xor sym lit32
+op#95 xor sym lit16
+op#96 xor sym lit08
+op#97 xor sym reg32
+op#98 xor sym reg16
+op#99 xor sym reg08
+o#100 xor reg32 lit32
+o#101 xor reg16 lit16
+o#102 xor reg08 lit08
+o#103 xor reg32 reg32
+o#104 xor reg16 reg16
+o#105 xor reg08 reg08
+o#106 xor reg32 sym
+o#107 xor reg16 sym
+o#108 xor reg08 sym
+
+
+
+
+
+JMP – Instruction
+
+o#109 Jmp sym
+o#110 Je sym
+o#111 Jen sym
+o#112 Jg sym
+o#113 Jng sym
+o#114 Jge sym
+o#115 Jnge sym
+o#116 Jl sym
+o#117 Jnl sym
+o#118 Jle sym
+o#119 Jnle sym
+o#120 Jz sym
+o#121 Jnz sym
+
+
+LOOP – Instruction
+
+o#122    loop sym
+
+
+CMP – Instructions
+
+o#123 cmp sym reg32
+o#124 cmp sym reg16
+o#125 cmp sym reg08
+o#126 cmp reg32 lit32
+o#127 cmp reg16 lit16
+o#128 cmp reg08 lit08
+o#129 cmp reg32 reg32
+o#130 cmp reg16 reg16
+o#131 cmp reg08 reg08
+o#132 cmp reg32 sym
+o#133 cmp reg16 sym
+o#134 cmp reg08 sym
+
+
+CALL – Instruction\
+
+o#135   call sym
+
+RET – Instruction
+o#136 ret reg32
+o#137 ret reg16
+o#138 ret reg08
+o#139 ret mem32/sym
+
+STRING – Instructions
+
+o#140 MOVSB
+o#141 MOVSW
+o#142 MOVSD
+o#143 CMPSB
+o#144 CMPSW
+o#145 CMPSD
+o#146 SCASB
+o#147 SCASW
+o#148 SCASD
+o#149 STOSB
+o#150 STOSW
+o#151 STOSD
+o#152 CLD
+o#153 STD

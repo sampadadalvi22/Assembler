@@ -1,0 +1,9 @@
+one:
+	two
+	python3 finalObj.py add.asm
+	python3 debugger.py add.asm
+
+two:
+	python3 macro.py macro.asm
+	python3 finalObj.py macro1.asm
+	

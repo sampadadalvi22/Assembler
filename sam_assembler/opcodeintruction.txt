@@ -1,0 +1,446 @@
+﻿                         OPCODE INSTRUCTION SET
+
+ModR/M Instructions:
+
+r8
+al
+bl
+cl
+dl
+ah
+bh
+ch
+dh
+r16
+ax
+bx
+cx
+dx
+sp
+bp
+si
+di
+r32
+eax
+ebx
+ecx
+edx
+esp
+ebp
+esi
+edi
+In digit
+0
+1
+2
+3
+4
+5
+6
+7
+In binary
+000
+001
+010
+011
+100
+101
+110
+111
+
+
+[eax]
+[ebx]
+[ecx]
+[edx]
+[--][--] 1
+disp32 2
+[esi]
+[edi]
+00
+000
+001
+010
+011
+100
+101
+110
+111
+00
+01
+02
+03
+04
+05
+06
+07
+08
+09
+0A
+0B
+0C
+0D
+0E
+0F
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+1A
+1B
+1C
+1D
+1E
+1F
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+2A
+2B
+2C
+2D
+2E
+2F
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+3A
+3B
+3C
+3D
+3E
+3F
+[eax]+disp8 3
+[ebx]+disp8
+[ecx]+disp8
+[edx]+disp8
+[--][--]+disp8
+[ebp]+disp8
+[esi]+disp8
+[edi]+disp8
+01
+000
+001
+010
+011
+100
+101
+110
+111
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+4A
+4B
+4C
+4D
+4E
+4F
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+5A
+5B
+5C
+5D
+5E
+5F
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+6A
+6B
+6C
+6D
+6E
+6F
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+7A
+7B
+7C
+7D
+7E
+7F
+[eax]+disp32
+[ebx]+disp32
+[ecx]+disp32
+[edx]+disp32
+[--][--]+disp32
+[ebp]+disp32
+[esi]+disp32
+[edi]+disp32
+10
+000
+001
+010
+011
+100
+101
+110
+111
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+8A
+8B
+8C
+8D
+8E
+8F
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+9A
+9B
+9C
+9D
+9E
+9F
+A0
+A1
+A2
+A3
+A4
+A5
+A6
+A7
+A8
+A9
+AA
+AB
+AC
+AD
+AE
+AF
+B0
+B1
+B2
+B3
+B4
+B5
+B6
+B7
+B8
+B9
+BA
+BB
+BC
+BD
+BE
+BF
+eax/ex/al
+ebx/bx/bl
+ecx/cx/cl
+edx/dx/dl
+esp/sp/ah
+ebp/bp/bh
+esi/si/ch
+edi/di/dh
+11
+000
+001
+010
+011
+100
+101
+110
+111
+C0
+C1
+C2
+C3
+C4
+C5
+C6
+C7
+C8
+C9
+CA
+CB
+CC
+CD
+CE
+CF
+D0
+D1
+D2
+D3
+D4
+D5
+D6
+D7
+D8
+D9
+DA
+DB
+DC
+DD
+DE
+DF
+E0
+E1
+E2
+E3
+E4
+E5
+E6
+E7
+E8
+E9
+EA
+EB
+EC
+ED
+EE
+EF
+F0
+F1
+F2
+F3
+F4
+F5
+F6
+F7
+F8
+F9
+FA
+FB
+FC
+FD
+FE
+FF
+
+
+
+
+MOV - Opcode Instructions
+
+88      Mov r8,r8
+89      Mov r16,r16
+89      Mov r32,r32
+A0     Mov r8,al
+A1     Mov r16,ax
+A1     Mov r32,eax
+8A     Mov r8,m8
+8B     Mov r16,m16
+8B     Mov r32,m32
+B0+   Rd id Mov r8,i8
+B8+   Rd id Mov r16,i16
+B8+   Rd id Mov r32,i32
+A2     Mov m8,al
+A3     Mov m16,ax
+A3     Mov m32,eax
+88      Mov m8,r8
+89      Mov m16,r16
+89      Mov m32,r32
+C6     Mov m8,i8
+C7     Mov m16,i16
+C7     Mov m32,i32
+
+
+PUSH - Opcode Instructions
+
+FF               push r16/m16
+FF               push r32/m32
+50+Rr id     push r16
+50+Rr id     push r32
+6A              push i08
+68               push i26
+68               push i32
+
+POP - Opcode Instructions
+
+8F                push r16/m16
+8F                push r32/m32
+58+Rr id      push r16
+58+Rd id     push r32
+
+ADD - Opcode Instructions
+
+00          add r8,r8
+01          add r16,r16
+01          add r32,r32
+04          add al,i8
+05          add ax,i16
+05          add eax,i32
+02          add r8,m8
+03          add r16,m16
+03          add r32,m32
+80          add r8,i8
+83          add r16,i16
+83          add r32,i32
+00          add m8,r8
+01          add m16,r16
+01          add m32,r32
+80          add m8,i8
+83          add m16,i16
+83          add m32,i32
+
+CALL - Opcode Instructions
+
+E8          call rel16
+E8          call rel32

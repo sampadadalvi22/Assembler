@@ -1,0 +1,37 @@
+
+0B030B07 < symbol table > :
+
+	1	a		D	dat	4	10
+	2	b		D	dat	4	20
+	3	msg		D	dat	7	result=
+	4	c		D	bss	4	-
+	5	main		U	txt	-	-
+	6	printf		U	txt	-	-
+
+0D170307 < literal table > :
+
+	1	50		32	reg,img
+	2	20		14	reg,img
+	3	10		0A	reg,img
+	4	20		14	reg,img
+
+0E016111 < section .data > :
+
+	0E016111 0A000000           	  a dd 10
+	0E016115 14000000           	  b dd 20
+	0E016119 726573756C743D000A-	  msg db "result=",0,10
+
+0D010143 < section .bss > :
+
+	0D010143 <res 00000004>      	  c resd 1
+
+0A070394 < _start > :
+
+	0A070394    BE32000000       
+	0A070399    BF14000000       
+	0A07039E    B8A0000000       
+	0A0703A3    B914000000       
+	0A0703A8    01C1             
+	0A0703AA    51               
+	0A0703AB    FF350    
+	0A0703AD    E8(00000000)   
